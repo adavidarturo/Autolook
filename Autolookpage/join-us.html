@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Únete a Autolook - Formulario</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- HEADER CON NAVEGACIÓN -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="logo">
+                    <h1>AUTOLOOK</h1>
+                    <p class="tagline">Premium Automotive Detailing</p>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="join-us.html" class="active btn-join">Unite</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO PAGE -->
+    <section class="page-hero">
+        <div class="page-hero-content">
+            <h1>Solicita Nuestros Servicios</h1>
+            <p>Llena el formulario y nos pondremos en contacto para agendar tu cita</p>
+        </div>
+    </section>
+
+    <!-- FORMULARIO PRINCIPAL -->
+    <section class="form-section">
+        <div class="container">
+            <div class="form-wrapper">
+                <h2>Formulario de Solicitud</h2>
+                <p class="form-subtitle">Completa todos los campos requeridos (*)</p>
+
+                <form id="joinForm" class="join-form">
+                    <!-- NOMBRE -->
+                    <div class="form-group">
+                        <label for="join-name">Nombre Completo *</label>
+                        <input
+                            type="text"
+                            id="join-name"
+                            name="name"
+                            placeholder="Ej: Juan García"
+                            required>
+                        <span class="form-error" id="error-name"></span>
+                    </div>
+
+                    <!-- EMAIL -->
+                    <div class="form-group">
+                        <label for="join-email">Email *</label>
+                        <input
+                            type="email"
+                            id="join-email"
+                            name="email"
+                            placeholder="tu@email.com"
+                            required>
+                        <span class="form-error" id="error-email"></span>
+                    </div>
+
+                    <!-- TELÉFONO -->
+                    <div class="form-group">
+                        <label for="join-phone">Teléfono *</label>
+                        <input
+                            type="tel"
+                            id="join-phone"
+                            name="phone"
+                            placeholder="+54 (11) 1234-5678"
+                            required>
+                        <span class="form-error" id="error-phone"></span>
+                    </div>
+
+                    <!-- TIPO DE VEHÍCULO (Información Adicional) -->
+                    <div class="form-group">
+                        <label for="join-vehicle">Tipo de Vehículo</label>
+                        <input
+                            type="text"
+                            id="join-vehicle"
+                            name="vehicle"
+                            placeholder="Ej: BMW X5 2022">
+                        <span class="form-hint">Información opcional para personalizar mejor nuestro servicio</span>
+                    </div>
+
+                    <!-- SELECTOR DE SERVICIO -->
+                    <div class="form-group">
+                        <label for="join-service">Servicio de Interés *</label>
+                        <select id="join-service" name="service" required>
+                            <option value="">-- Selecciona un servicio --</option>
+                            <option value="ceramic-coating">Ceramic Coating</option>
+                            <option value="pulido">Pulido Profesional</option>
+                            <option value="detailing-interior">Detailing Interior</option>
+                            <option value="ppf">Protección PPF</option>
+                            <option value="limpieza-motor">Limpieza de Motor</option>
+                            <option value="restauracion-opticas">Restauración de Ópticas</option>
+                            <option value="descontaminado">Descontaminado</option>
+                            <option value="mantenimiento-premium">Mantenimiento Premium</option>
+                            <option value="otros">Otros / Consulta Especial</option>
+                        </select>
+                        <span class="form-error" id="error-service"></span>
+                    </div>
+
+                    <!-- TEXTAREA DINÁMICO (Se muestra solo si elige "Otros") -->
+                    <div class="form-group" id="otros-container" style="display: none;">
+                        <label for="join-otros">Por favor especifica tu consulta *</label>
+                        <textarea
+                            id="join-otros"
+                            name="otros"
+                            rows="5"
+                            placeholder="Cuéntanos qué servicio o consulta especial necesitas...">
+                        </textarea>
+                        <span class="form-error" id="error-otros"></span>
+                    </div>
+
+                    <!-- MENSAJE / COMENTARIOS ADICIONALES -->
+                    <div class="form-group">
+                        <label for="join-message">Comentarios o Preguntas Adicionales</label>
+                        <textarea
+                            id="join-message"
+                            name="message"
+                            rows="4"
+                            placeholder="¿Hay algo más que debemos saber?">
+                        </textarea>
+                    </div>
+
+                    <!-- TÉRMINOS Y CONDICIONES -->
+                    <div class="form-group checkbox-group">
+                        <input
+                            type="checkbox"
+                            id="join-terms"
+                            name="terms"
+                            required>
+                        <label for="join-terms">Acepto los términos y condiciones y autorizo el contacto *</label>
+                        <span class="form-error" id="error-terms"></span>
+                    </div>
+
+                    <!-- BOTÓN ENVÍO -->
+                    <button type="submit" class="btn btn-primary btn-submit">Solicitar Servicio</button>
+
+                    <!-- MENSAJE DE ÉXITO (Oculto inicialmente) -->
+                    <div id="form-success" class="form-success" style="display: none;">
+                        <div class="success-message">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <h3>¡Solicitud Enviada!</h3>
+                            <p>Gracias por tu interés. Nos pondremos en contacto pronto para agendar tu cita.</p>
+                            <a href="index.html" class="btn btn-secondary">Volver al Inicio</a>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="form-footer">
+                    <p>¿Tienes dudas? <a href="contacto.html">Contactanos directamente</a> o llámanos al +54 (11) 1234-5678</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE BENEFICIOS -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2>¿Por Qué Solicitar Nuestros Servicios?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">⭐</div>
+                    <h3>Garantía Total</h3>
+                    <p>Si no estás 100% satisfecho, repetimos el trabajo sin costo adicional</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚗</div>
+                    <h3>Expertos Certificados</h3>
+                    <p>Nuestro equipo está capacitado con las mejores técnicas internacionales</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💎</div>
+                    <h3>Productos Premium</h3>
+                    <p>Utilizamos solo marcas líderes en la industria del detailing automotriz</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⏱️</div>
+                    <h3>Horarios Flexibles</h3>
+                    <p>Agendamos según tu disponibilidad. También ofrecemos servicio a domicilio</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>AUTOLOOK</h3>
+                <p>Excelencia en detailing automotriz premium</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="#" class="social-icon" title="Instagram">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.057-1.645.069-4.849.069-3.204 0-3.584-.012-4.849-.069-3.259-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" title="Facebook">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" title="WhatsApp">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.898 1.243l-.39-.075C5.633 6.945 4.59 4.76 3.965 3.23c-.624-1.529-1.496-3.529-1.496-5.23 0-3.315 2.7-6 6.023-6 1.59 0 3.086.55 4.313 1.563 1.226.997 1.926 2.42 1.926 3.95 0 .993-.263 1.944-.768 2.749-.505.805-1.22 1.508-2.084 1.992-.864.484-1.871.756-2.883.756z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>📧 info@autolook.com</p>
+                <p>📱 +XX XXX-XXXX</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Autolook. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
