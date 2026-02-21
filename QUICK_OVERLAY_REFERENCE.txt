@@ -1,0 +1,69 @@
+═══════════════════════════════════════════════════════════════════════════════
+                    AJUSTE RÁPIDO DEL DIFUMINADO HERO
+═══════════════════════════════════════════════════════════════════════════════
+
+📍 UBICACIÓN EXACTA DEL CONTROL:
+   Archivo: css/styles.css
+   Línea:   51
+   Variable: --hero-overlay-dark
+
+═══════════════════════════════════════════════════════════════════════════════
+
+3️⃣ PASOS PARA AJUSTAR:
+
+   1. Abre: Autolookpage/css/styles.css
+
+   2. Encuentra línea 51:
+      :root {
+          --hero-overlay-dark: 0.5;    ← MODIFICA ESTE NÚMERO
+          --hero-overlay-cyan: 0.08;
+      }
+
+   3. Cambia el número 0.5 por:
+      • 0.3 = Imagen clara (poco oscuro)
+      • 0.5 = Balance perfecto ⭐ RECOMENDADO
+      • 0.7 = Texto muy visible
+
+   4. Guarda (Ctrl+S)
+
+   5. Recarga navegador (F5)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🎨 ESCALA VISUAL:
+
+   0.3 ────→ Imagen dominante, texto claro
+   0.4 ────→ Más imagen visible
+   0.5 ────→ ⭐ BALANCE IDEAL (recomendado)
+   0.6 ────→ Más text visible
+   0.7 ────→ Imagen oscura, máxima legibilidad
+   1.0 ────→ Completamente negro (no recomendado)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📸 CAMBIAR IMÁGENES:
+
+   index.html   → assets/images/hero-bg.jpg
+   nosotros.html → assets/images/hero-nosotros.jpg
+   contacto.html → assets/images/hero-contacto.jpg
+
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ SOLUCIÓN RÁPIDA SI TÍTULOS NO SE VEN:
+
+   Abre css/styles.css línea 51
+   Cambia:  --hero-overlay-dark: 0.5;
+   Por:     --hero-overlay-dark: 0.65;
+
+   GUARDA → RECARGA → ¡LISTO!
+
+═══════════════════════════════════════════════════════════════════════════════
+
+💡 TIPS:
+
+   • Prueba valores de 0.05 en 0.05 (0.45, 0.50, 0.55, 0.60, 0.65, 0.70)
+   • El cambio afecta automáticamente a las 3 páginas: index, nosotros, contacto
+   • No necesitas cambiar HTML, todo está en CSS
+   • Guarda el archivo CSS CADA VEZ que hagas un cambio
+
+═══════════════════════════════════════════════════════════════════════════════

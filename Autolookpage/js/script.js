@@ -4,65 +4,86 @@
    ===================================== */
 
 // =====================================
-// ARRAY DE SERVICIOS (8 Servicios)
+// ARRAY DE SERVICIOS (11 Servicios)
 // =====================================
 
 const services = [
     {
         id: 'ceramic-coating',
-        name: 'Ceramic Coating',
-        description: 'Protección de larga duración que repele agua, suciedad y contaminantes. Crea una barrera invisible que mantiene tu vehículo impecable por años.',
+        name: 'Recubrimiento Cerámico y Nanografeno',
+        description: 'Aplicación de capas protectoras de última tecnología que crean un escudo ultraduro y brillante sobre la pintura.',
         price: '$$$',
-        features: ['Protección 2-5 años', 'Repele agua y suciedad', 'Brillo Ultra', 'Fácil limpieza']
-    },
-    {
-        id: 'pulido',
-        name: 'Pulido Profesional',
-        description: 'Elimina rayones superficiales, marcas de agua y oxido. Devuelve el brillo original y prepara la pintura para tratamientos premium.',
-        price: '$$',
-        features: ['Elimina rayones', 'Restaura brillo', 'Prepara pintura', 'Hasta 3 capas']
-    },
-    {
-        id: 'detailing-interior',
-        name: 'Detailing Interior',
-        description: 'Limpieza profunda y acondicionamiento premium de todos los interiores. Revitaliza cueros, plásticos y telas con productos de alta gama.',
-        price: '$$$',
-        features: ['Limpieza profunda', 'Acondicionamiento cuero', 'Aromas premium', 'Protección UV']
+        features: ['Dureza Extrema', 'Efecto Hidrofóbico', 'Brillo Espejo', 'Resistencia UV']
     },
     {
         id: 'ppf',
-        name: 'Protección PPF',
-        description: 'Paint Protection Film (PPF) de última generación. Protege contra rasguños, piedras y daños ambientales. Transparente e invisible.',
+        name: 'PPF (Paint Protection Film)',
+        description: 'Instalación de película de poliuretano transparente y autocurativa para proteger la carrocería de impactos físicos.',
         price: '$$$',
-        features: ['Protección transparente', 'Auto-sanación', '10+ años durabilidad', 'Cobertura completa']
+        features: ['Autocuración', 'Anti-Impactos', 'Invisible', 'Garantía Larga Duración']
     },
     {
-        id: 'limpieza-motor',
-        name: 'Limpieza de Motor',
-        description: 'Limpieza profunda del compartimento del motor. Esencial para mantener el rendimiento y prevenir problemas de corrosión.',
+        id: 'wrapping',
+        name: 'Empapelado / Wrapping',
+        description: 'Cambio de color o personalización total del vehículo mediante vinilos de alta calidad.',
         price: '$$',
-        features: ['Desengrasamiento', 'Protección anti-corrosión', 'Brillo restaurado', 'Longevidad del motor']
+        features: ['Personalización Total', 'Reversible', 'Protección Ligera', 'Cambio de Look Rápido']
     },
     {
-        id: 'restauracion-opticas',
-        name: 'Restauración de Ópticas',
-        description: 'Recupera la transparencia original de faros y calaveras. Elimina opacidad y rayones causados por UV y contaminación.',
+        id: 'polarizados',
+        name: 'Polarizados (3M, Stek)',
+        description: 'Instalación de láminas de control solar de marcas premium para mejorar confort y privacidad.',
         price: '$$',
-        features: ['Restaura transparencia', 'Elimina opacidad', 'Cristal como nuevo', 'Mejora visibilidad']
+        features: ['Rechazo Térmico', 'Filtro UV', 'Seguridad', 'Privacidad']
     },
     {
-        id: 'descontaminado',
-        name: 'Descontaminación',
-        description: 'Eliminación profesional de contaminantes metálicos y químicos. Paso esencial antes de cualquier tratamiento de protección.',
+        id: 'limpieza-profunda',
+        name: 'Limpieza Profunda',
+        description: 'Higienización exhaustiva de cada rincón del vehículo, eliminando suciedad acumulada.',
+        price: '$$',
+        features: ['Desinfección', 'Detallado de Ductos', 'Maquinaria Profesional', 'Renovación Total']
+    },
+    {
+        id: 'lavado-premium',
+        name: 'Lavado Premium PH Neutro',
+        description: 'Lavado técnico artesanal utilizando productos que respetan los tratamientos previos de la pintura.',
         price: '$',
-        features: ['Elimina metales', 'Limpia químicos', 'Prepara pintura', 'Extenso proceso']
+        features: ['Seguridad PH Neutro', 'Técnica de Dos Baldes', 'Cuidado de Llantas', 'Secado Seguro']
     },
     {
-        id: 'mantenimiento-premium',
-        name: 'Mantenimiento Premium',
-        description: 'Programa completo de mantenimiento periódico. Mantiene tu vehículo en condiciones de concesionario durante todo el año.',
+        id: 'pulido-profesional',
+        name: 'Pulido Profesional',
+        description: 'Proceso de corrección de pintura para eliminar imperfecciones y devolver la suavidad al tacto.',
         price: '$$',
-        features: ['Inspección completa', 'Limpieza profunda', 'Protecciones', 'Periodicidad flexible']
+        features: ['Corrección de Defectos', 'Nivelación', 'Claridad Óptica', 'Preparación Ideal']
+    },
+    {
+        id: 'tapiceria',
+        name: 'Tapicería',
+        description: 'Reparación, limpieza y renovación de asientos y revestimientos interiores.',
+        price: '$$',
+        features: ['Cuidado de Cuero', 'Lavado de Tela', 'Tratamiento de Alfombras', 'Preservación']
+    },
+    {
+        id: 'restauracion-plasticos',
+        name: 'Restauración de Tablero / Plásticos',
+        description: 'Recuperación del color y textura original de las superficies plásticas desgastadas.',
+        price: '$',
+        features: ['Hidratación', 'Acabado Original', 'Capa Protectora', 'Estética Coherente']
+    },
+    {
+        id: 'chapa-pintura',
+        name: 'Chapa y Pintura Express',
+        description: 'Reparaciones rápidas de abolladuras y pintura para daños focalizados.',
+        price: '$$',
+        features: ['Rapidez', 'Igualación de Color', 'Calidad de Taller', 'Eficiencia']
+    },
+    {
+        id: 'actualizacion-formato',
+        name: 'Actualización de Formato',
+        description: 'Modernización estética del vehículo mediante cambio de piezas o detalles de diseño.',
+        price: '$$',
+        features: ['Facelift Visual', 'Cambio de Emblemas', 'Chrome Delete', 'Modernización']
     }
 ];
 
@@ -79,9 +100,11 @@ function renderServices() {
         <div class="service-card">
             <div class="service-card-image">
                 <!-- ESPACIO PARA IMAGEN: ${service.name}
-                     Recomendación: Imagen de 400x250px
-                     Formato: JPG o WebP
-                     Ruta sugerida: assets/images/${service.id}.jpg
+                     Instrucciones:
+                     1. Coloca una imagen JPG o WebP en assets/images/
+                     2. Usa el nombre sugerido: ${service.id}.jpg
+                     3. Tamaño recomendado: 400x250px (mínimo)
+                     4. Reemplaza el comentario de abajo con: <img src="assets/images/${service.id}.jpg" alt="${service.name}">
                 -->
                 <p>${service.name}</p>
             </div>
@@ -90,7 +113,7 @@ function renderServices() {
                 <p>${service.description}</p>
                 <div class="service-price">${service.price}</div>
                 <div class="service-features">
-                    ${service.features.map(feature => `<span style="display: block; font-size: 0.85rem; color: #d4af37; margin: 0.25rem 0;">✓ ${feature}</span>`).join('')}
+                    ${service.features.map(feature => `<span style="display: block; font-size: 0.85rem; color: #0aaec4; margin: 0.25rem 0;">✓ ${feature}</span>`).join('')}
                 </div>
             </div>
         </div>
@@ -271,18 +294,8 @@ function setupContactForm() {
 // NAVEGACIÓN ACTIVA
 // =====================================
 
-function setActiveNavLink() {
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.classList.remove('active');
-
-        const href = link.getAttribute('href');
-        if (href === currentPage || (currentPage === '' && href === 'index.html')) {
-            link.classList.add('active');
-        }
-    });
-}
+// Función actualizada en la sección HAMBURGER MENU TOGGLE
 
 // =====================================
 // SCROLL SUAVE (Ya implementado con CSS)
@@ -347,3 +360,49 @@ if (result) {
     // Mostrar error
 }
 */
+
+// =====================================
+// HAMBURGER MENU TOGGLE (Mobile)
+// =====================================
+
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+
+// Toggle mobile menu when hamburger is clicked
+if (hamburgerBtn) {
+    hamburgerBtn.addEventListener('click', function() {
+        hamburgerBtn.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+    });
+}
+
+// Close mobile menu when a link is clicked
+mobileNavLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        hamburgerBtn.classList.remove('active');
+        mobileMenu.classList.remove('active');
+    });
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('.navbar') && !e.target.closest('#hamburgerBtn') && mobileMenu.classList.contains('active')) {
+        hamburgerBtn.classList.remove('active');
+        mobileMenu.classList.remove('active');
+    }
+});
+
+// Update active navigation link based on current page
+function setActiveNavLink() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+    document.querySelectorAll('.nav-links a, .mobile-nav-links a').forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+}
