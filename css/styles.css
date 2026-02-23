@@ -222,14 +222,17 @@ input, textarea, select {
 
 .btn-join {
     background-color: var(--secondary-color);
-    color: var(--primary-color);
+    color: black !important;
     padding: 0.5rem 1.5rem;
     border-radius: var(--border-radius);
     font-weight: 600;
 }
 
-.btn-join:hover {
+.btn-join:hover,
+.btn-join:active,
+.btn-join.active {
     background-color: #e6c200;
+    color: black !important;
     transform: translateY(-2px);
 }
 
@@ -353,15 +356,30 @@ input, textarea, select {
     border-left-color: var(--secondary-color);
 }
 
+/* Excepción para el botón btn-join activo en móviles */
+.mobile-nav-links a.active.btn-join {
+    color: black !important;
+    background-color: var(--secondary-color);
+}
+
 .mobile-nav-links .btn-join {
     background-color: var(--secondary-color);
-    color: var(--primary-color);
+    color: black !important;
     padding: 0.75rem 1.5rem;
     border-radius: var(--border-radius);
     font-weight: 600;
     display: inline-block;
     border: none;
     border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav-links .btn-join:hover,
+.mobile-nav-links .btn-join:active,
+.mobile-nav-links .btn-join.active {
+    background-color: #e6c200;
+    color: black !important;
+    border-left-color: black;
 }
 
 .mobile-social-nav {
