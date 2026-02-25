@@ -643,6 +643,14 @@ input, textarea, select {
     color: var(--secondary-color);
     font-weight: 600;
     border-bottom: 2px solid var(--border-color);
+    overflow: hidden;
+}
+
+.service-image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .service-preview-card h3 {
