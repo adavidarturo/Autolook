@@ -12,21 +12,21 @@ const services = [
         id: 'ceramic-coating',
         name: 'Recubrimiento Cerámico y Nanografeno',
         description: 'Aplicación de capas protectoras de última tecnología que crean un escudo ultraduro y brillante sobre la pintura.',
-        price: '$$$',
+        price: 'Desde  $150',
         features: ['Dureza Extrema', 'Efecto Hidrofóbico', 'Brillo Espejo', 'Resistencia UV']
     },
     {
         id: 'ppf',
         name: 'PPF (Paint Protection Film)',
         description: 'Instalación de película de poliuretano transparente y autocurativa para proteger la carrocería de impactos físicos.',
-        price: '$$$',
+        price: 'Desde  $250',
         features: ['Autocuración', 'Anti-Impactos', 'Invisible', 'Garantía Larga Duración']
     },
     {
         id: 'wrapping',
         name: 'Empapelado / Wrapping',
         description: 'Cambio de color o personalización total del vehículo mediante vinilos de alta calidad.',
-        price: '$$',
+        price: 'Desde  $$$',
         features: ['Personalización Total', 'Reversible', 'Protección Ligera', 'Cambio de Look Rápido']
     },
     {
@@ -40,7 +40,7 @@ const services = [
         id: 'limpieza-profunda',
         name: 'Limpieza Profunda',
         description: 'Higienización exhaustiva de cada rincón del vehículo, eliminando suciedad acumulada.',
-        price: '$$',
+        price: 'Desde ',
         features: ['Desinfección', 'Detallado de Ductos', 'Maquinaria Profesional', 'Renovación Total']
     },
     {

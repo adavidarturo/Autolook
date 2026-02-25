@@ -657,6 +657,39 @@ input, textarea, select {
     font-size: 0.9rem;
 }
 
+/* Botón de WhatsApp en servicios destacados */
+.service-preview-card .whatsapp-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.75rem 1.5rem;
+    margin: 0 var(--spacing-md) var(--spacing-md);
+    width: calc(100% - 2 * var(--spacing-md));
+    background-color: #25D366;
+    color: white;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+}
+
+.service-preview-card .whatsapp-btn:hover {
+    background-color: #20ba5a;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
+    text-decoration: none;
+}
+
+.service-preview-card .whatsapp-btn svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
 .view-all-services {
     text-align: center;
 }
