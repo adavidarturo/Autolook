@@ -1444,6 +1444,10 @@ input, textarea, select {
         flex-direction: column;
     }
 
+    .hero-content {
+        padding: 0 var(--spacing-md);
+    }
+
     .page-hero-content h1 {
         font-size: 1.8rem;
     }
@@ -1455,6 +1459,7 @@ input, textarea, select {
 
     .hero {
         height: 60vh;
+        background-attachment: scroll;
     }
 
     .btn {
@@ -1474,6 +1479,44 @@ input, textarea, select {
     .social-nav-icon svg {
         width: 16px;
         height: 16px;
+    }
+
+    /* Servicios Destacados - Tablet */
+    .featured-services {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+
+    .featured-services h2 {
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .services-preview {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .service-image-placeholder {
+        height: 220px;
+    }
+
+    .service-image-placeholder img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Servicios Grid - Tablet */
+    .service-card-image {
+        height: 230px;
+    }
+
+    /* Staff Section - Tablet */
+    .staff-image-placeholder {
+        height: 250px;
     }
 
     /* Hamburger Menu - Tablet */
@@ -1545,14 +1588,70 @@ input, textarea, select {
         font-size: 0.9rem;
     }
 
+    .hero {
+        height: 50vh;
+        background-attachment: scroll;
+    }
+
+    .hero-content {
+        padding: 0 var(--spacing-sm);
+    }
+
     .container {
         padding: 0 var(--spacing-sm);
+    }
+
+    .featured-services {
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+
+    .featured-services h2 {
+        font-size: 1.8rem;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .section-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: var(--spacing-lg);
     }
 
     .services-grid,
     .features-grid,
     .values-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* Servicios Destacados - Mobile */
+    .services-preview {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .service-preview-card {
+        margin: 0 auto;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .service-image-placeholder {
+        height: 260px;
+    }
+
+    .service-image-placeholder img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Servicios Grid - Mobile */
+    .service-card-image {
+        height: 220px;
+    }
+
+    /* Staff Section - Mobile */
+    .staff-image-placeholder {
+        height: 220px;
     }
 
     .social-nav {
