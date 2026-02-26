@@ -13,6 +13,7 @@ const services = [
         name: 'Recubrimiento Cerámico y Nanografeno',
         description: 'Aplicación de capas protectoras de última tecnología que crean un escudo ultraduro y brillante sobre la pintura.',
         price: 'Desde  $150',
+        image: 'ceramica-1.webp',
         features: ['Dureza Extrema', 'Efecto Hidrofóbico', 'Brillo Espejo', 'Resistencia UV']
     },
     {
@@ -20,69 +21,79 @@ const services = [
         name: 'PPF (Paint Protection Film)',
         description: 'Instalación de película de poliuretano transparente y autocurativa para proteger la carrocería de impactos físicos.',
         price: 'Desde  $250',
+        image: 'ppf-2.webp',
         features: ['Autocuración', 'Anti-Impactos', 'Invisible', 'Garantía Larga Duración']
     },
     {
         id: 'wrapping',
         name: 'Empapelado / Wrapping',
         description: 'Cambio de color o personalización total del vehículo mediante vinilos de alta calidad.',
-        price: 'Desde  $$$',
+        price: "$$$",
+        image: 'empapelado-2.jpg',
         features: ['Personalización Total', 'Reversible', 'Protección Ligera', 'Cambio de Look Rápido']
     },
     {
         id: 'polarizados',
         name: 'Polarizados (3M, Stek)',
         description: 'Instalación de láminas de control solar de marcas premium para mejorar confort y privacidad.',
-        price: '$$',
+        price: 'Desde $180',
+        image: 'polarizado-1.webp',
         features: ['Rechazo Térmico', 'Filtro UV', 'Seguridad', 'Privacidad']
     },
     {
         id: 'limpieza-profunda',
         name: 'Limpieza Profunda',
         description: 'Higienización exhaustiva de cada rincón del vehículo, eliminando suciedad acumulada.',
-        price: 'Desde ',
+        price: 'Desde $120',
+        image: 'limpieza-2.jpg',
         features: ['Desinfección', 'Detallado de Ductos', 'Maquinaria Profesional', 'Renovación Total']
     },
     {
         id: 'lavado-premium',
         name: 'Lavado Premium PH Neutro',
         description: 'Lavado técnico artesanal utilizando productos que respetan los tratamientos previos de la pintura.',
-        price: '$',
+        price: 'Desde $20',
+        image: 'lavado-2.webp',
         features: ['Seguridad PH Neutro', 'Técnica de Dos Baldes', 'Cuidado de Llantas', 'Secado Seguro']
     },
     {
         id: 'pulido-profesional',
         name: 'Pulido Profesional',
         description: 'Proceso de corrección de pintura para eliminar imperfecciones y devolver la suavidad al tacto.',
-        price: '$$',
+        price: 'Desde $100',
+        image: 'pulido-2.webp',
         features: ['Corrección de Defectos', 'Nivelación', 'Claridad Óptica', 'Preparación Ideal']
     },
     {
         id: 'tapiceria',
         name: 'Tapicería',
         description: 'Reparación, limpieza y renovación de asientos y revestimientos interiores.',
-        price: '$$',
+        price: 'Desde $350',
+        image: 'tapiceria-2.webp',
         features: ['Cuidado de Cuero', 'Lavado de Tela', 'Tratamiento de Alfombras', 'Preservación']
     },
     {
         id: 'restauracion-plasticos',
-        name: 'Restauración de Tablero / Plásticos',
+        name: 'Restauración de Plásticos',
         description: 'Recuperación del color y textura original de las superficies plásticas desgastadas.',
-        price: '$',
+        price: 'Desde $70',
+        image: 'tablero-2.jpg',
         features: ['Hidratación', 'Acabado Original', 'Capa Protectora', 'Estética Coherente']
     },
     {
         id: 'chapa-pintura',
         name: 'Chapa y Pintura Express',
         description: 'Reparaciones rápidas de abolladuras y pintura para daños focalizados.',
-        price: '$$',
+        price: 'Desde $120',
+        image: 'chapa_pintura-1.webp',
         features: ['Rapidez', 'Igualación de Color', 'Calidad de Taller', 'Eficiencia']
     },
     {
         id: 'actualizacion-formato',
         name: 'Actualización de Formato',
         description: 'Modernización estética del vehículo mediante cambio de piezas o detalles de diseño.',
-        price: '$$',
+        price: '$$$',
+        image: '',
         features: ['Facelift Visual', 'Cambio de Emblemas', 'Chrome Delete', 'Modernización']
     }
 ];
@@ -99,14 +110,7 @@ function renderServices() {
     container.innerHTML = services.map(service => `
         <div class="service-card">
             <div class="service-card-image">
-                <!-- ESPACIO PARA IMAGEN: ${service.name}
-                     Instrucciones:
-                     1. Coloca una imagen JPG o WebP en assets/images/
-                     2. Usa el nombre sugerido: ${service.id}.jpg
-                     3. Tamaño recomendado: 400x250px (mínimo)
-                     4. Reemplaza el comentario de abajo con: <img src="assets/images/${service.id}.jpg" alt="${service.name}">
-                -->
-                <p>${service.name}</p>
+                ${service.image ? `<img src="assets/images/${service.image}" alt="${service.name}">` : `<p>${service.name}</p>`}
             </div>
             <div class="service-card-content">
                 <h3>${service.name}</h3>
