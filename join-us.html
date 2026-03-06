@@ -83,7 +83,15 @@
     </header>
 
     <!-- HERO PAGE -->
-    <section class="page-hero">
+    <!-- ESPACIO PARA HERO IMAGE (Unirse)
+         Instrucciones:
+         1. Crea una imagen de 1920x600px (mínimo 1920x500px)
+         2. Tema recomendado: Auto en detailing o persona llenando formulario
+         3. Coloca la imagen en: assets/images/hero-join.jpg o .webp
+         4. Actualiza el atributo style de abajo con:
+            style="background-image: url('assets/images/hero-join.webp');"
+    -->
+    <section class="page-hero" style="background-image: url('assets/images/------------');">
         <div class="page-hero-content">
             <h1>Solicita Nuestros Servicios</h1>
             <p>Llena el formulario y nos pondremos en contacto para agendar tu cita</p>
@@ -150,14 +158,17 @@
                         <label for="join-service">Servicio de Interés *</label>
                         <select id="join-service" name="service" required>
                             <option value="">-- Selecciona un servicio --</option>
-                            <option value="ceramic-coating">Ceramic Coating</option>
-                            <option value="pulido">Pulido Profesional</option>
-                            <option value="detailing-interior">Detailing Interior</option>
-                            <option value="ppf">Protección PPF</option>
-                            <option value="limpieza-motor">Limpieza de Motor</option>
-                            <option value="restauracion-opticas">Restauración de Ópticas</option>
-                            <option value="descontaminado">Descontaminado</option>
-                            <option value="mantenimiento-premium">Mantenimiento Premium</option>
+                            <option value="ceramic-coating">Recubrimiento Cerámico y Nanografeno</option>
+                            <option value="ppf">PPF (Paint Protection Film)</option>
+                            <option value="wrapping">Empapelado / Wrapping</option>
+                            <option value="polarizados">Polarizados (3M, Stek)</option>
+                            <option value="limpieza-profunda">Limpieza Profunda</option>
+                            <option value="lavado-premium">Lavado Premium PH Neutro</option>
+                            <option value="pulido-profesional">Pulido Profesional</option>
+                            <option value="tapiceria">Tapicería</option>
+                            <option value="restauracion-plasticos">Restauración de Tablero / Plásticos</option>
+                            <option value="chapa-pintura">Chapa y Pintura Express</option>
+                            <option value="actualizacion-formato">Actualización de Formato</option>
                             <option value="otros">Otros / Consulta Especial</option>
                         </select>
                         <span class="form-error" id="error-service"></span>
@@ -214,7 +225,7 @@
                 </form>
 
                 <div class="form-footer">
-                    <p>¿Tienes dudas? <a href="contacto.html">Contactanos directamente</a> o llámanos al +591 77371633</p>
+                    <p>¿Tienes dudas? <a href="https://wa.me/59177371633?text=Hola%20tengo%20una%20consulta%20sobre%20sus%20servicios" target="_blank">Contactanos por WhatsApp</a> o llámanos al +591 77371633</p>
                 </div>
             </div>
         </div>

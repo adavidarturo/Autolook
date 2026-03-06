@@ -204,23 +204,54 @@ function setupJoinForm() {
         }
 
         if (isValid) {
-            // Construir objeto de datos
+            // Obtener datos del formulario
+            const vehicle = document.getElementById('join-vehicle').value.trim();
+            const message = document.getElementById('join-message').value.trim();
+
+            // Obtener el nombre del servicio seleccionado
+            const serviceSelect = document.getElementById('join-service');
+            const serviceName = serviceSelect.options[serviceSelect.selectedIndex].text;
+
+            // Construir mensaje para WhatsApp con emojis y saltos de línea
+            let whatsappMessage = `📋 *NUEVA SOLICITUD DE SERVICIO*\n\n`;
+            whatsappMessage += `👤 *Nombre:* ${name}\n`;
+            whatsappMessage += `📧 *Email:* ${email}\n`;
+            whatsappMessage += `📱 *Teléfono:* ${phone}\n`;
+
+            if (vehicle) {
+                whatsappMessage += `🚗 *Vehículo:* ${vehicle}\n`;
+            }
+
+            whatsappMessage += `🔧 *Servicio Solicitado:* ${serviceName}\n`;
+
+            if (service === 'otros' && otros) {
+                whatsappMessage += `💬 *Consulta Especial:* ${otros}\n`;
+            }
+
+            if (message) {
+                whatsappMessage += `📝 *Comentarios Adicionales:* ${message}\n`;
+            }
+
+            whatsappMessage += `\n⏰ *Fecha:* ${new Date().toLocaleString('es-ES')}\n`;
+            whatsappMessage += `\n---\n`;
+            whatsappMessage += `_Mensaje enviado desde el formulario de solicitud de Autolook_`;
+
+            // Crear enlace de WhatsApp con el mensaje
+            const whatsappNumber = '59169247619';
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+            // Guardar en localStorage
             const formData = {
                 nombre: name,
                 email: email,
                 telefono: phone,
-                vehiculo: document.getElementById('join-vehicle').value,
-                servicio: service,
+                vehiculo: vehicle || null,
+                servicio: serviceName,
                 consulta_especial: otros || null,
-                mensaje: document.getElementById('join-message').value,
+                mensaje: message || null,
                 fecha: new Date().toLocaleString('es-ES')
             };
-
-            // AQUÍ IRÍA LA LÓGICA PARA ENVIAR A UN SERVIDOR
-            // Por ahora, solo mostrar en consola y mostrar mensaje de éxito
-            console.log('Datos del formulario:', formData);
-
-            // Guardar en localStorage (opcional, para demostrativo)
             localStorage.setItem('autolook_last_request', JSON.stringify(formData));
 
             // Mostrar mensaje de éxito
@@ -231,6 +262,11 @@ function setupJoinForm() {
             setTimeout(() => {
                 document.getElementById('form-success').scrollIntoView({ behavior: 'smooth' });
             }, 100);
+
+            // Abrir WhatsApp en una nueva pestaña después de mostrar el mensaje de éxito
+            setTimeout(() => {
+                window.open(whatsappURL, '_blank');
+            }, 1500);
         }
     });
 }
