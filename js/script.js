@@ -236,10 +236,22 @@ function setupJoinForm() {
             whatsappMessage += `\n---\n`;
             whatsappMessage += `_Mensaje enviado desde el formulario de solicitud de Autolook_`;
 
-            // Crear enlace de WhatsApp con el mensaje
-            const whatsappNumber = '59169247619';
+            // Crear enlace de WhatsApp según dispositivo (móvil o desktop)
+            const whatsappNumber = '59177371633';
             const encodedMessage = encodeURIComponent(whatsappMessage);
-            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+            // Detectar si es dispositivo móvil
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+            // Usar protocolo correcto según dispositivo
+            let whatsappURL;
+            if (isMobile) {
+                // En móviles: usar el protocolo nativo de WhatsApp
+                whatsappURL = `whatsapp://send?phone=${whatsappNumber}&text=${encodedMessage}`;
+            } else {
+                // En desktop: usar WhatsApp Web
+                whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+            }
 
             // Guardar en localStorage
             const formData = {
@@ -272,65 +284,6 @@ function setupJoinForm() {
 }
 
 // =====================================
-// LÓGICA DE FORMULARIO DE CONTACTO
-// =====================================
-
-function setupContactForm() {
-    const form = document.getElementById('contactForm');
-
-    if (!form) return;
-
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const subject = document.getElementById('subject').value.trim();
-        const message = document.getElementById('message').value.trim();
-
-        // Validaciones básicas
-        if (name.length < 3) {
-            alert('El nombre debe tener al menos 3 caracteres');
-            return;
-        }
-
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            alert('Por favor ingresa un email válido');
-            return;
-        }
-
-        if (subject.length < 5) {
-            alert('El asunto debe tener al menos 5 caracteres');
-            return;
-        }
-
-        if (message.length < 10) {
-            alert('El mensaje debe tener al menos 10 caracteres');
-            return;
-        }
-
-        // Construir objeto de datos
-        const formData = {
-            nombre: name,
-            email: email,
-            telefono: document.getElementById('phone').value,
-            vehiculo: document.getElementById('vehicle').value,
-            asunto: subject,
-            mensaje: message,
-            fecha: new Date().toLocaleString('es-ES')
-        };
-
-        console.log('Mensaje de contacto:', formData);
-        localStorage.setItem('autolook_contact_message', JSON.stringify(formData));
-
-        // Mostrar confirmación
-        alert('Gracias por tu mensaje. Nos pondremos en contacto pronto!');
-        form.reset();
-    });
-}
-
-// =====================================
 // NAVEGACIÓN ACTIVA
 // =====================================
 
@@ -353,7 +306,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Configurar formularios
     setupJoinForm();
-    setupContactForm();
 
     // Establecer navegación activa
     setActiveNavLink();
