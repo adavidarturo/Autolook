@@ -1,0 +1,70 @@
+/**
+ * =====================================
+ * CSS VARIABLES & THEME
+ * VARIABLES CSS Y TEMA
+ * =====================================
+ * Central CSS variables for theming and spacing.
+ * Variables CSS centrales para temas y espaciado.
+ * Update these variables to change the entire design color scheme and spacing.
+ * Actualiza estas variables para cambiar el esquema de color y espaciado del diseño.
+ */
+
+:root {
+  /* ===== PRIMARY COLORS ===== */
+  /* Colores primarios */
+  --primary-color: #1a1a1a;          /* Main dark background / Fondo oscuro principal */
+  --secondary-color: #0ca5b9;         /* Accent cyan / Acento cian */
+  --accent-color: #f0f0f0;            /* Light accent / Acento claro */
+  --dark-bg: #0f0f0f;                 /* Darkest background / Fondo más oscuro */
+  --light-text: #e0e0e0;              /* Primary text / Texto principal */
+  --border-color: #333;               /* Borders / Bordes */
+
+  /* ===== TYPOGRAPHY ===== */
+  /* Tipografía */
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-heading: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  /* ===== SPACING SCALE ===== */
+  /* Escala de espaciado */
+  --spacing-xs: 0.5rem;               /* Extra small: 8px */
+  --spacing-sm: 1rem;                 /* Small: 16px */
+  --spacing-md: 1.5rem;               /* Medium: 24px */
+  --spacing-lg: 2rem;                 /* Large: 32px */
+  --spacing-xl: 3rem;                 /* Extra large: 48px */
+
+  /* ===== BORDER RADIUS ===== */
+  /* Radios de borde */
+  --border-radius: 8px;               /* Standard / Estándar */
+  --border-radius-lg: 12px;           /* Large / Grande */
+
+  /* ===== SHADOWS ===== */
+  /* Sombras - Using secondary color with transparency */
+  /* Sombras - Usando color secundario con transparencia */
+  --shadow-sm: 0 2px 8px rgba(212, 175, 55, 0.1);
+  --shadow-md: 0 4px 16px rgba(212, 175, 55, 0.15);
+  --shadow-lg: 0 8px 32px rgba(212, 175, 55, 0.2);
+
+  /* ===== LOGO RESPONSIVE VARIABLES ===== */
+  /* Variables responsivas del logo */
+  --logo-size: 60px;                  /* Logo size / Tamaño del logo */
+  --logo-gap: 1rem;                   /* Gap between logo and text / Espacio entre logo y texto */
+
+  /* ===== HERO OVERLAY CUSTOMIZATION ===== */
+  /* Personalización de overlay del hero */
+  /**
+   * Adjust these values to change the hero section image darkness:
+   * Ajusta estos valores para cambiar la oscuridad de la imagen del hero:
+   * 0 = Transparent (fully visible image)
+   * 0 = Transparente (imagen completamente visible)
+   * 0.3 = 30% dark (light overlay, image clearly visible)
+   * 0.3 = 30% oscuro (overlay claro, imagen claramente visible)
+   * 0.5 = 50% dark (medium overlay, balanced)
+   * 0.5 = 50% oscuro (overlay medio, equilibrado)
+   * 0.7 = 70% dark (dark overlay, better text contrast)
+   * 0.7 = 70% oscuro (overlay oscuro, mejor contraste de texto)
+   * Recommended for readability: 0.5 - 0.7
+   * Recomendado para legibilidad: 0.5 - 0.7
+   */
+  --hero-overlay-dark: 0.7;           /* Dark overlay opacity (0-1) / Opacidad del overlay oscuro */
+  --hero-overlay-cyan: 0.08;          /* Cyan tint opacity (0-1) / Opacidad del tinte cian */
+}

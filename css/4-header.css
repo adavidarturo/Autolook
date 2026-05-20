@@ -1,0 +1,389 @@
+/**
+ * =====================================
+ * HEADER & NAVIGATION STYLES
+ * ESTILOS DE HEADER Y NAVEGACIÓN
+ * =====================================
+ * Styling for header, navbar, logo, navigation links, and hamburger menu.
+ * Estilos para header, barra de navegación, logo, enlaces de navegación y menú hamburguesa.
+ */
+
+/* ===== HEADER ===== */
+/* Main header container
+   Contenedor principal del header */
+.header {
+  background-color: var(--primary-color);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Navbar inner padding and layout
+   Espaciado interno de la barra de navegación y diseño */
+.navbar {
+  padding: var(--spacing-md) 0;
+}
+
+/* Navbar container - max width and flex layout
+   Contenedor de barra de navegación - ancho máximo y diseño flex */
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===== LOGO ===== */
+/* Logo link styling
+   Estilo del enlace del logo */
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--logo-gap);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Logo hover effect
+   Efecto al pasar sobre el logo */
+.logo:hover {
+  transform: scale(1.02);
+}
+
+/* Logo image styling
+   Estilo de imagen del logo */
+.logo-img {
+  height: var(--logo-size);
+  width: var(--logo-size);
+  object-fit: contain;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(10, 174, 196, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Logo image hover effect with enhanced shadow
+   Efecto al pasar sobre imagen del logo con sombra mejorada */
+.logo-img:hover {
+  box-shadow: 0 4px 16px rgba(10, 174, 196, 0.5);
+}
+
+/* Logo content container for text
+   Contenedor de contenido del logo para texto */
+.logo-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Logo heading h1
+   Encabezado h1 del logo */
+.logo h1 {
+  font-size: 1.8rem;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 0;
+  line-height: 1.1;
+}
+
+/* Logo "AUTO" part - heavy weight
+   Parte "AUTO" del logo - peso pesado */
+.logo-auto {
+  font-weight: 900;
+  color: white;
+  letter-spacing: 1px;
+}
+
+/* Logo first letter of "AUTO" with secondary color
+   Primera letra de "AUTO" con color secundario */
+.logo-auto::first-letter {
+  color: var(--secondary-color);
+}
+
+/* Logo "LOOK" part - light weight
+   Parte "LOOK" del logo - peso ligero */
+.logo-look {
+  font-weight: 300;
+  color: white;
+  letter-spacing: 2px;
+}
+
+/* Logo first letter highlight
+   Primera letra del logo resaltada */
+.logo-letter-highlight {
+  color: var(--secondary-color);
+  font-weight: 900;
+}
+
+/* Logo tagline
+   Eslogan del logo */
+.tagline {
+  font-size: 0.7rem;
+  color: var(--light-text);
+  margin-top: 2px;
+  white-space: nowrap;
+}
+
+/* ===== NAVIGATION ===== */
+/* Container for right side navigation elements
+   Contenedor para elementos de navegación del lado derecho */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+/* Navigation links list
+   Lista de enlaces de navegación */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: var(--spacing-lg);
+  align-items: center;
+}
+
+/* Navigation link styling
+   Estilo de enlaces de navegación */
+.nav-links a {
+  color: var(--light-text);
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+/* Active and hover state for nav links
+   Estado activo y al pasar para enlaces de navegación */
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--secondary-color);
+}
+
+/* Underline indicator for active link
+   Indicador de subrayado para enlace activo */
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--secondary-color);
+}
+
+/* Join button styling in desktop nav
+   Estilo del botón "Unirse" en navegación de escritorio */
+.btn-join {
+  background-color: var(--secondary-color);
+  color: black !important;
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+}
+
+/* Join button hover states
+   Estados al pasar del botón "Unirse" */
+.btn-join:hover,
+.btn-join:active,
+.btn-join.active {
+  background-color: #e6c200;
+  color: black !important;
+  transform: translateY(-2px);
+}
+
+/* ===== SOCIAL NAVIGATION ===== */
+/* Container for social media icons in header
+   Contenedor para iconos de redes sociales en header */
+.social-nav {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+/* Social media icon styling
+   Estilo de iconos de redes sociales */
+.social-nav-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(10, 174, 196, 0.15);
+  color: var(--secondary-color);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(10, 174, 196, 0.3);
+}
+
+/* Social icon hover effect with transform
+   Efecto al pasar del icono social con transformación */
+.social-nav-icon:hover {
+  background-color: var(--secondary-color);
+  color: white;
+  transform: scale(1.1) translateY(-2px);
+  border-color: var(--secondary-color);
+}
+
+/* Social icon SVG display
+   Visualización de SVG de icono social */
+.social-nav-icon svg {
+  display: block;
+}
+
+/* ===== HAMBURGER MENU (MOBILE) ===== */
+/* Hamburger button
+   Botón hamburguesa */
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+/* Individual hamburger lines
+   Líneas individuales de la hamburguesa */
+.hamburger-line {
+  width: 25px;
+  height: 3px;
+  background-color: var(--secondary-color);
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+/* Hamburger first line - rotate up
+   Primera línea de la hamburguesa - girar hacia arriba */
+.hamburger-btn.active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+
+/* Hamburger middle line - fade out
+   Línea del medio de la hamburguesa - desvanecerse */
+.hamburger-btn.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+/* Hamburger third line - rotate down
+   Tercera línea de la hamburguesa - girar hacia abajo */
+.hamburger-btn.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ===== MOBILE MENU ===== */
+/* Mobile menu dropdown container
+   Contenedor desplegable del menú móvil */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--primary-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: var(--spacing-lg);
+  z-index: 999;
+  animation: slideDown 0.3s ease;
+}
+
+/* Mobile menu active state
+   Estado activo del menú móvil */
+.mobile-menu.active {
+  display: block;
+}
+
+/* Slide down animation
+   Animación de deslizamiento hacia abajo */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile navigation links list
+   Lista de enlaces de navegación móvil */
+.mobile-nav-links {
+  list-style: none;
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Mobile nav link item
+   Elemento de enlace de navegación móvil */
+.mobile-nav-links li {
+  margin-bottom: var(--spacing-md);
+}
+
+/* Mobile nav link styling
+   Estilo de enlace de navegación móvil */
+.mobile-nav-links a {
+  color: var(--light-text);
+  font-weight: 500;
+  transition: color 0.3s ease;
+  display: block;
+  padding: var(--spacing-sm);
+  border-left: 3px solid transparent;
+}
+
+/* Mobile nav link hover and active states
+   Estados activos y al pasar de enlaces de navegación móvil */
+.mobile-nav-links a:hover,
+.mobile-nav-links a.active {
+  color: var(--secondary-color);
+  border-left-color: var(--secondary-color);
+}
+
+/* Mobile nav join button - active state exception
+   Excepción de estado activo del botón de unirse en navegación móvil */
+.mobile-nav-links a.active.btn-join {
+  color: black !important;
+  background-color: var(--secondary-color);
+}
+
+/* Mobile nav join button styling
+   Estilo del botón de unirse en navegación móvil */
+.mobile-nav-links .btn-join {
+  background-color: var(--secondary-color);
+  color: black !important;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  display: inline-block;
+  border: none;
+  border-left: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+/* Mobile nav join button hover and active states
+   Estados de pasar y activo del botón de unirse en navegación móvil */
+.mobile-nav-links .btn-join:hover,
+.mobile-nav-links .btn-join:active,
+.mobile-nav-links .btn-join.active {
+  background-color: #e6c200;
+  color: black !important;
+  border-left-color: black;
+}
+
+/* Mobile social navigation
+   Navegación de redes sociales móvil */
+.mobile-social-nav {
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+/* Mobile social nav icon size adjustment
+   Ajuste de tamaño del icono de red social móvil */
+.mobile-social-nav .social-nav-icon {
+  width: 40px;
+  height: 40px;
+}

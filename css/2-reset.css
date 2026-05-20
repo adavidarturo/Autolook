@@ -1,0 +1,56 @@
+/**
+ * =====================================
+ * RESET & BASE STYLES
+ * RESET Y ESTILOS BASE
+ * =====================================
+ * Global reset and foundational styles for all elements.
+ * Reset global y estilos fundamentales para todos los elementos.
+ */
+
+/* Reset all default margins and padding
+   Resetea todos los márgenes y paddings por defecto */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Smooth scrolling behavior for anchor links
+   Comportamiento de desplazamiento suave para enlaces ancla */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Body base styles
+   Estilos base del cuerpo */
+body {
+  font-family: var(--font-main);
+  background-color: var(--dark-bg);
+  color: var(--light-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Link default styling with transitions
+   Estilo predeterminado de enlaces con transiciones */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+/* Button default styling
+   Estilo predeterminado de botones */
+button {
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-main);
+}
+
+/* Form elements inherit font family
+   Elementos de formulario heredan familia de fuentes */
+input,
+textarea,
+select {
+  font-family: var(--font-main);
+}

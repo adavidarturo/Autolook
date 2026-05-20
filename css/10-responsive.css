@@ -1,0 +1,325 @@
+/**
+ * =====================================
+ * RESPONSIVE & MEDIA QUERIES
+ * RESPONSIVE Y CONSULTAS DE MEDIA
+ * =====================================
+ * Responsive design breakpoints for tablets and mobile devices.
+ * Puntos de ruptura de diseño responsivo para tabletas y dispositivos móviles.
+ * Breakpoints: 768px (tablet), 480px (mobile)
+ */
+
+/* ===== TABLET BREAKPOINT (768px and below) ===== */
+/* Punto de ruptura de tableta (768px y menos) */
+@media (max-width: 768px) {
+  /* Logo responsive on tablet
+     Logo responsivo en tableta */
+  :root {
+    --logo-size: 50px;
+    --logo-gap: 0.75rem;
+  }
+
+  .navbar-container {
+    flex-direction: row;
+    gap: var(--spacing-md);
+  }
+
+  .logo h1 {
+    font-size: 1.4rem;
+  }
+
+  .tagline {
+    font-size: 0.6rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    justify-content: center;
+  }
+
+  .nav-right {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-md);
+  }
+
+  /* Hero section responsive
+     Sección hero responsiva */
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-content {
+    padding: 0 var(--spacing-md);
+  }
+
+  .hero {
+    height: 60vh;
+    background-attachment: scroll;
+  }
+
+  .page-hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  /* Buttons responsive
+     Botones responsivos */
+  .btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  /* Social icons smaller on tablet
+     Iconos sociales más pequeños en tableta */
+  .social-nav {
+    gap: 0.6rem;
+  }
+
+  .social-nav-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .social-nav-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* Featured services responsive
+     Servicios destacados responsivos */
+  .featured-services {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .featured-services h2 {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .services-preview {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .service-image-placeholder {
+    height: 220px;
+  }
+
+  .service-image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Services grid on tablet
+     Cuadrícula de servicios en tableta */
+  .service-card-image {
+    height: 230px;
+  }
+
+  /* Staff section responsive
+     Sección de personal responsiva */
+  .staff-image-placeholder {
+    height: 250px;
+  }
+
+  /* Hamburger menu visible on tablet
+     Menú hamburguesa visible en tableta */
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none !important;
+  }
+
+  .social-nav {
+    display: none;
+  }
+
+  /* Contact grid on tablet
+     Cuadrícula de contacto en tableta */
+  .contact-grid,
+  .mission-vision-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar-container {
+    position: relative;
+  }
+}
+
+/* ===== MOBILE BREAKPOINT (480px and below) ===== */
+/* Punto de ruptura móvil (480px y menos) */
+@media (max-width: 480px) {
+  /* Logo responsive on mobile
+     Logo responsivo en móvil */
+  :root {
+    --logo-size: 45px;
+    --logo-gap: 0.5rem;
+  }
+
+  .navbar {
+    padding: var(--spacing-sm);
+  }
+
+  .navbar-container {
+    padding: 0 var(--spacing-sm);
+  }
+
+  .logo {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .logo h1 {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+
+  .tagline {
+    font-size: 0.55rem;
+  }
+
+  .nav-links {
+    gap: var(--spacing-xs);
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-right {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-sm);
+  }
+
+  /* Hero section mobile
+     Sección hero móvil */
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    height: 50vh;
+    background-attachment: scroll;
+  }
+
+  .hero-content {
+    padding: 0 var(--spacing-sm);
+  }
+
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+
+  /* Featured services mobile
+     Servicios destacados móvil */
+  .featured-services {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+
+  .featured-services h2 {
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .services-grid,
+  .features-grid,
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-preview {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .service-preview-card {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .service-image-placeholder {
+    height: 260px;
+  }
+
+  .service-image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Services grid mobile
+     Cuadrícula de servicios móvil */
+  .service-card-image {
+    height: 220px;
+  }
+
+  /* Staff section mobile
+     Sección de personal móvil */
+  .staff-image-placeholder {
+    height: 220px;
+  }
+
+  /* Social icons mobile
+     Iconos sociales móvil */
+  .social-nav {
+    gap: 0.4rem;
+  }
+
+  .social-nav-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .social-nav-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* Hamburger menu mobile
+     Menú hamburguesa móvil */
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none !important;
+  }
+
+  .social-nav {
+    display: none;
+  }
+
+  .mobile-menu {
+    padding: var(--spacing-md);
+  }
+
+  .mobile-social-nav {
+    gap: var(--spacing-sm);
+  }
+}

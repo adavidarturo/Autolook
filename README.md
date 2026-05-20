@@ -246,18 +246,6 @@ Los datos se guardan en `localStorage` con keys:
 
 ---
 
-## 🚀 Próximos Pasos
-
-1. **Agregar imágenes** en `assets/images/`
-2. **Actualizar información de contacto** en todos los archivos
-3. **Configurar Google Maps** en contacto.html
-4. **Personalizar nombres de staff** en nosotros.html
-5. **Configurar enlaces de WhatsApp/Email** en staff-cards
-6. **Integrar con backend** si tienes servidor (opcional)
-7. **Probar en diferentes navegadores** y dispositivos
-
----
-
 ## 📄 Licencia
 
 Proyecto Autolook © 2024. Todos los derechos reservados.

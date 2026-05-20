@@ -28,7 +28,7 @@ const services = [
         id: 'wrapping',
         name: 'Empapelado / Wrapping',
         description: 'Cambio de color o personalización total del vehículo mediante vinilos de alta calidad.',
-        price: "$$$",
+        price: "Evaluacion previa",
         image: 'empapelado-2.jpg',
         features: ['Personalización Total', 'Reversible', 'Protección Ligera', 'Cambio de Look Rápido']
     },
@@ -92,7 +92,7 @@ const services = [
         id: 'actualizacion-formato',
         name: 'Actualización de Formato',
         description: 'Modernización estética del vehículo mediante cambio de piezas o detalles de diseño.',
-        price: '$$$',
+        price: 'Evaluacion previa',
         image: '',
         features: ['Facelift Visual', 'Cambio de Emblemas', 'Chrome Delete', 'Modernización']
     }
@@ -234,7 +234,7 @@ function setupJoinForm() {
 
             whatsappMessage += `\n⏰ *Fecha:* ${new Date().toLocaleString('es-ES')}\n`;
             whatsappMessage += `\n---\n`;
-            whatsappMessage += `_Mensaje enviado desde el formulario de solicitud de Autolook_`;
+            whatsappMessage += `_Solicitud generada desde el formulario web oficial de Autolook_`;
 
             // Crear enlace de WhatsApp según dispositivo (móvil o desktop)
             const whatsappNumber = '59177371633';

@@ -1,0 +1,117 @@
+/**
+ * =====================================
+ * HERO SECTIONS STYLES
+ * ESTILOS DE SECCIONES HERO
+ * =====================================
+ * Styling for main hero section and internal page hero sections.
+ * Estilos para sección hero principal y secciones hero de páginas internas.
+ */
+
+/* ===== MAIN HERO (INDEX PAGE) ===== */
+/* Full-height hero section with background image
+   Sección hero de altura completa con imagen de fondo */
+.hero {
+  height: 100vh;
+  background-image: linear-gradient(
+    135deg,
+    rgba(15, 15, 15, var(--hero-overlay-dark)) 0%,
+    rgba(10, 174, 196, var(--hero-overlay-cyan)) 100%
+  ),
+  url('assets/images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Hero overlay element (currently transparent, can be used for additional effects)
+   Elemento de overlay del hero (actualmente transparente, puede usarse para efectos adicionales) */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  z-index: 1;
+}
+
+/* Hero content positioning
+   Posicionamiento del contenido del hero */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 600px;
+}
+
+/* Hero title styling
+   Estilo del título del hero */
+.hero-title {
+  font-size: 3.5rem;
+  color: white;
+  margin-bottom: var(--spacing-md);
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+/* Hero subtitle styling
+   Estilo del subtítulo del hero */
+.hero-subtitle {
+  font-size: 1.3rem;
+  color: var(--secondary-color);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Hero buttons container
+   Contenedor de botones del hero */
+.hero-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ===== PAGE HERO (INTERNAL PAGES) ===== */
+/* Hero section for internal pages (servicios, nosotros, etc.)
+   Sección hero para páginas internas (servicios, nosotros, etc.) */
+.page-hero {
+  background: linear-gradient(
+    135deg,
+    rgba(15, 15, 15, var(--hero-overlay-dark)) 100%,
+    rgba(10, 174, 196, var(--hero-overlay-cyan)) 100%
+  ),
+  url('assets/images/hero-bg-default.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  padding: 6rem var(--spacing-lg);
+  text-align: center;
+  border-bottom: 2px solid var(--border-color);
+  position: relative;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Page hero content heading
+   Encabezado de contenido del hero de página */
+.page-hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--secondary-color);
+}
+
+/* Page hero content paragraph
+   Párrafo de contenido del hero de página */
+.page-hero-content p {
+  font-size: 1.1rem;
+  color: var(--light-text);
+}

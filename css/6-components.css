@@ -1,0 +1,176 @@
+/**
+ * =====================================
+ * COMPONENTS STYLES
+ * ESTILOS DE COMPONENTES
+ * =====================================
+ * Reusable component styles: buttons, cards, containers.
+ * Estilos de componentes reutilizables: botones, tarjetas, contenedores.
+ */
+
+/* ===== CONTAINER ===== */
+/* Main content container with max width
+   Contenedor de contenido principal con ancho máximo */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+/* ===== BUTTONS ===== */
+/* Base button styling
+   Estilo base de botones */
+.btn {
+  padding: 0.75rem 2rem;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Primary button - cyan background
+   Botón primario - fondo cian */
+.btn-primary {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+/* Primary button hover effect
+   Efecto al pasar del botón primario */
+.btn-primary:hover {
+  background-color: #e6c200;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Secondary button - outline style
+   Botón secundario - estilo de contorno */
+.btn-secondary {
+  background-color: transparent;
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+}
+
+/* Secondary button hover effect
+   Efecto al pasar del botón secundario */
+.btn-secondary:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+/* White button
+   Botón blanco */
+.btn-white {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+/* White button hover effect
+   Efecto al pasar del botón blanco */
+.btn-white:hover {
+  background-color: var(--light-text);
+}
+
+/* ===== CARDS ===== */
+/* Generic card styling (base for all card types)
+   Estilo genérico de tarjetas (base para todos los tipos de tarjetas) */
+.card {
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+/* Card hover effect
+   Efecto al pasar de la tarjeta */
+.card:hover {
+  border-color: var(--secondary-color);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+}
+
+/* ===== WHATSAPP BUTTON ===== */
+/* WhatsApp button styling (used in service cards, staff info, etc.)
+   Estilo del botón de WhatsApp (usado en tarjetas de servicios, información de personal, etc.) */
+.whatsapp-btn {
+  background-color: #25D366;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+}
+
+/* WhatsApp button hover effect
+   Efecto al pasar del botón de WhatsApp */
+.whatsapp-btn:hover {
+  background-color: #20ba5a;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
+  text-decoration: none;
+}
+
+/* WhatsApp button icon
+   Icono del botón de WhatsApp */
+.whatsapp-btn svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* ===== GENERIC STAFF BUTTON ===== */
+/* Generic staff button styling (base for contact buttons)
+   Estilo genérico del botón de personal (base para botones de contacto) */
+.staff-btn {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+/* Email button variant
+   Variante de botón de correo electrónico */
+.email-btn {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+/* Email button hover effect
+   Efecto al pasar del botón de correo electrónico */
+.email-btn:hover {
+  background-color: #e6c200;
+}
+
+/* ===== GRID LAYOUTS ===== */
+/* Responsive grid with auto-fit columns
+   Cuadrícula responsiva con columnas de ajuste automático */
+.grid-auto-fit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+/* 2-column responsive grid
+   Cuadrícula responsiva de 2 columnas */
+.grid-2-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+}
