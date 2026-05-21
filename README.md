@@ -1,65 +1,135 @@
 # AUTOLOOK - Premium Automotive Detailing Website
 
-## Descripción General
+## 📋 Descripción General
 
-Website profesional de 5 páginas para **Autolook**, empresa especializada en detailing automotriz premium. Diseño moderno con estética de lujo, totalmente responsive y con funcionalidad dinámica.
+Website profesional de 5 páginas para **Autolook**, empresa especializada en detailing automotriz premium. Diseño moderno con estética de lujo, totalmente responsive y con funcionalidad dinámica. **Refactorizado con estructura modular y código bien documentado en inglés y español.**
 
 ---
 
-## 📋 Estructura del Proyecto
+## 🏗️ Estructura del Proyecto (ACTUALIZADO - Estructura Modular)
 
 ```
-Autolookpage/
-├── index.html              # Página de inicio (Hero + Resumen de servicios)
-├── servicios.html          # Listado completo de 8 servicios
-├── nosotros.html           # Aboutpage con Misión/Visión/Staff
-├── contacto.html           # Página de contacto con Google Maps + Formulario
-├── join-us.html            # Formulario de solicitud de servicios
-├── css/
-│   └── styles.css          # Estilos globales (Premium/Lujo)
-├── js/
-│   └── script.js           # Lógica JavaScript (Arrays + Dinámico)
+Autolook/
+├── index.html                 # Página de inicio (Hero + Resumen de servicios)
+├── servicios.html             # Listado completo de 11 servicios
+├── nosotros.html              # About page con Misión/Visión/Staff/Logros
+├── contacto.html              # Página de contacto con Google Maps + Info
+├── join-us.html               # Formulario de solicitud de servicios
+│
+├── css/                        # Estilos segmentados (ACTUALIZADO)
+│   ├── 1-variables.css         # Variables CSS, temas, spacing
+│   ├── 2-reset.css             # Reset global y estilos base
+│   ├── 4-header.css            # Header, navbar, menú hamburguesa
+│   ├── 5-hero.css              # Secciones hero
+│   ├── 6-components.css        # Botones, cards, componentes reutilizables
+│   ├── 7-sections.css          # Servicios, staff, logros, valores
+│   ├── 8-forms.css             # Formularios y validación
+│   ├── 9-footer.css            # Footer
+│   ├── 10-responsive.css       # Media queries (tablet/mobile)
+│   └── styles.css              # Hub principal (importa todo)
+│
+├── js/                         # JavaScript modular (ACTUALIZADO)
+│   ├── config/
+│   │   └── constants.js        # Datos centralizados (servicios, URLs, reglas)
+│   ├── modules/
+│   │   ├── navigation.js       # Menú hamburguesa y navegación activa
+│   │   ├── services.js         # Renderización de servicios
+│   │   └── forms.js            # Lógica de formularios con validación
+│   ├── utils/
+│   │   └── helpers.js          # Funciones auxiliares reutilizables
+│   └── index.js                # Archivo principal orquestador
+│
 └── assets/
-    ├── images/            # Folder para imágenes (VACÍO - Agrega aquí)
-    └── svgs/              # Folder para iconos SVG (opcional)
+    ├── images/                 # Imágenes del sitio
+    │   ├── heroImageIndex.jpg
+    │   ├── ceramica-1.webp
+    │   ├── polarizado-1.webp
+    │   └── ... (más imágenes de servicios)
+    └── svgs/                   # Iconos SVG (opcional)
 ```
+
+---
+
+
+### ❌ **NO ELIMINAR - SON NECESARIAS:**
+
+- ✔️ `css/` - Contiene toda la presentación visual segmentada
+- ✔️ `js/` - Lógica de la aplicación (config, modules, utils)
+- ✔️ `assets/images/` - Imágenes del sitio (necesarias para funcionalidad)
+- ✔️ Archivos `.html` - Contenido de las páginas
+
 
 ---
 
 ## 🎨 Características Principales
 
-✅ **5 Páginas HTML Completas**
+### ✅ **5 Páginas HTML Completas**
 
-- Index con hero impactante
-- Servicios con renderización dinámica
-- About con staff profesional
-- Contacto con Google Maps integrado
-- Formulario de solicitud inteligente
+- **Index**: Hero impactante + resumen de servicios destacados
+- **Servicios**: Listado completo de 11 servicios con renderización dinámica
+- **About (Nosotros)**: Misión/Visión, staff profesional, logros, valores
+- **Contacto**: Google Maps integrado + formulario + información
+- **Join-Us**: Formulario de solicitud con validación inteligente
 
-✅ **Array de 8 Servicios**
+### ✅ **Array de 11 Servicios Dinámicos**
 
-- Ceramic Coating
+- Recubrimiento Cerámico
+- PPF (Paint Protection Film)
+- Empapelado/Wrapping
+- Polarizados (3M, Stek)
+- Limpieza Profunda
+- Lavado Premium PH Neutro
 - Pulido Profesional
-- Detailing Interior
-- Protección PPF
-- Limpieza de Motor
-- Restauración de Ópticas
-- Descontaminación
-- Mantenimiento Premium
+- Tapicería
+- Restauración de Plásticos
+- Chapa y Pintura Express
+- Actualización de Formato
 
-✅ **Funcionalidad Dinámica**
+### ✅ **Funcionalidad JavaScript (Modular & Documentada)**
 
-- Renderización de servicios desde Array JS
-- Selector dinámico con textarea condicional en formulario
-- Validación de formularios
-- Social icons (Instagram, Facebook, WhatsApp)
+| Módulo | Función | Archivo |
+|--------|---------|---------|
+| **Navigation** | Menú hamburguesa, nav activa | `modules/navigation.js` |
+| **Services** | Renderización dinámica de servicios | `modules/services.js` |
+| **Forms** | Validación y WhatsApp integration | `modules/forms.js` |
+| **Helpers** | Utilidades reutilizables | `utils/helpers.js` |
+| **Constants** | Datos centralizados | `config/constants.js` |
 
-✅ **Diseño Premium**
+### ✅ **Diseño Premium**
 
-- Colores dorados (#d4af37) y tonos oscuros
+- Colores cyan (#0ca5b9) y tonos oscuros
 - Responsive design (Mobile, Tablet, Desktop)
-- Animaciones suaves
-- Transiciones elegantes
+- Animaciones suaves en transiciones
+- Botones de acción prominentes (cyan)
+- Header sticky con navegación clara
+- Footer con enlaces e información
+
+---
+
+## 📝 Actualización - Comentarios Bilingües
+
+Toda el código incluye comentarios detallados en **INGLÉS Y ESPAÑOL**:
+
+- **Funciones**: JSDoc con @param y @returns
+- **Secciones**: Comentarios explicativos de bloques
+- **Variables complejas**: Notas sobre propósito y uso
+- **CSS**: Explicaciones de valores y propósitos
+
+**Ejemplo en JavaScript:**
+```js
+/**
+ * Toggles mobile menu visibility
+ * Alterna la visibilidad del menú móvil
+ * @param {Event} e - Click event
+ * @returns {void}
+ */
+```
+
+**Ejemplo en CSS:**
+```css
+/* Logo size responsive / Tamaño del logo responsivo */
+--logo-size: 60px;
+```
 
 ---
 
@@ -67,199 +137,252 @@ Autolookpage/
 
 ### 1. **Hero Image (index.html)**
 
-- **Ubicación**: `assets/images/hero-bg.jpg`
-- **Tamaño recomendado**: 1920x1080 o superior
+- **Ubicación**: `assets/images/heroImageIndex.jpg`
+- **Tamaño recomendado**: 1920x1080 px (mínimo 1920x500 px)
 - **Tema**: Auto lujoso, detailing en proceso, garage premium
-- **Instrucciones en HTML**: Línea ~42 en index.html
+- **Actualizar en HTML**: Línea ~86
 
-### 2. **Servicios Preview (index.html)**
+### 2. **Servicios (index.html - Destacados)**
 
-- **Ubicación**: `assets/images/[servicio-nombre].jpg`
+- **Ubicación**: `assets/images/[servicio].webp`
 - **Tamaño**: 500x300 px
-- **Cantidad**: 3 imágenes (Ceramic Coating, Pulido, Detailing Interior)
+- **Ejemplos**: ceramica-1.webp, polarizado-1.webp, chapa_pintura-1.webp
 
 ### 3. **Servicios Completos (servicios.html)**
 
-- **Ubicación**: `assets/images/[service-id].jpg`
-- **Tamaño**: 400x250 px
-- **Cantidad**: 8 imágenes (una por cada servicio)
-- **Ejemplo**: `ceramic-coating.jpg`, `pulido.jpg`, etc.
+Se renderizan dinámicamente desde el array en `js/config/constants.js`:
+- Cada servicio debe tener su imagen en `assets/images/`
+- Las rutas se definen en el array de SERVICES
 
-### 4. **Staff (nosotros.html)**
+### 4. **Google Maps (contacto.html)**
 
-- **Ubicación**: `assets/images/staff-1.jpg`, `assets/images/staff-2.jpg`
-- **Tamaño**: 500x500 px
-- **Tipo**: Fotos profesionales de 2 asesores
+- Ve a: https://www.google.com/maps
+- Busca tu ubicación
+- Haz clic en "Compartir" → "Insertar un mapa"
+- Reemplaza el `src` del iframe en contacto.html (línea ~120)
 
 ---
 
-## 📝 Instrucciones de Personalización
+## 📱 Responsive Design
 
-### 1. **Agregar Imágenes**
+| Dispositivo | Ancho | Cambios |
+|-------------|-------|---------|
+| **Desktop** | 1200px+ | Diseño completo, menú normal |
+| **Tablet** | 768px - 1199px | Menú hamburguesa, ajustes de tamaño |
+| **Mobile** | <768px | Diseño optimizado, espacios reducidos |
 
-```bash
-# Crea la estructura de directorios
-mkdir -p assets/images
-mkdir -p assets/svgs
+Todos los componentes se adaptan automáticamente usando CSS Grid y Flexbox.
 
-# Copia tus imágenes a:
-# - Hero: assets/images/hero-bg.jpg
-# - Servicios: assets/images/[service-id].jpg
-# - Staff: assets/images/staff-1.jpg, staff-2.jpg
+---
+
+## 🔧 Cómo Personalizar
+
+### 1. **Actualizar Información de Contacto**
+
+Busca y reemplaza en TODOS los archivos:
+
+```
++591 77371633 → Tu teléfono
+autolook.tuconsentida@gmail.com → Tu email
+Ubicación → Tu dirección
 ```
 
-### 2. **Actualizar Rutas de Imágenes en HTML**
+**Archivos donde buscar:**
+- `*.html` (headers, footers)
+- `js/config/constants.js` (WHATSAPP_NUMBER)
 
-En **index.html** (línea ~42):
+### 2. **Modificar Servicios**
 
-```html
-<!-- Reemplazar: src="RUTA_AQUÍ" con tu imagen -->
-```
-
-En **servicios.html**, cada tarjeta tiene un comentario indicando dónde agregar imagen.
-
-### 3. **Integrar Google Maps (contacto.html)**
-
-1. Ve a: https://www.google.com/maps
-2. Busca tu ubicación
-3. Haz clic en "Compartir"
-4. Selecciona "Insertar un mapa"
-5. Copia el `src` del iframe
-6. Reemplaza en **contacto.html** línea ~98
-
-### 4. **Actualizar Información de Contacto**
-
-Busca y reemplaza en todos los archivos:
-
-- `+XX XXX-XXXX` → Tu teléfono
-- `info@autolook.com` → Tu email
-- `Calle Principal 123` → Tu dirección
-- `CP 1234` → Tu código postal
-
-### 5. **Configurar Links de Staff**
-
-En **nosotros.html**, actualiza:
-
-```html
-<!-- Línea ~195 -->
-<a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank">WhatsApp</a>
-<a href="mailto:your.email@example.com">Email</a>
-```
-
----
-
-## 🎯 Colores y Estilos
-
-```css
---primary-color: #1a1a1a /* Gris oscuro corporativo */
-  --secondary-color: #d4af37 /* Dorado premium */ --dark-bg: #0f0f0f
-  /* Fondo muy oscuro */ --light-text: #e0e0e0 /* Texto claro */;
-```
-
----
-
-## 📱 Responsividad
-
-- **Desktop**: 1200px y superior
-- **Tablet**: 768px - 1199px
-- **Mobile**: Menor a 768px
-
-Todos los componentes se adaptan automáticamente.
-
----
-
-## 💻 Funciones JavaScript
-
-### `renderServices()`
-
-Renderiza dinámicamente los 8 servicios desde el Array.
-
-### `setupJoinForm()`
-
-- Muestra/oculta textarea cuando se selecciona "Otros"
-- Valida campos requeridos
-- Almacena datos en localStorage
-- Muestra mensaje de éxito
-
-### `setupContactForm()`
-
-Valida y procesa formulario de contacto.
-
-### `setActiveNavLink()`
-
-Marca la página activa en el navegador.
-
----
-
-## 🔧 Integración con Backend (Opcional)
-
-Para enviar datos a un servidor, descomenta en **script.js** (línea ~220+):
+Edita el array en `js/config/constants.js`:
 
 ```javascript
-const result = await sendToServer("/api/solicitudes", formData);
+export const SERVICES = [
+  {
+    id: 'tu-servicio',
+    name: 'Nombre del Servicio',
+    description: 'Descripción...',
+    price: 'Desde $XXX',
+    image: 'nombre-imagen.webp',
+    features: ['Característica 1', 'Característica 2', ...]
+  }
+  // ... más servicios
+];
 ```
 
-Y configura tu endpoint.
+### 3. **Cambiar Colores del Tema**
+
+Edita `css/1-variables.css`:
+
+```css
+:root {
+  --primary-color: #1a1a1a;      /* Fondo oscuro */
+  --secondary-color: #0ca5b9;    /* Color cyan (botones) */
+  --light-text: #e0e0e0;         /* Texto claro */
+  --border-color: #333;          /* Bordes */
+  /* ... más variables */
+}
+```
+
+### 4. **Integración Backend (Opcional)**
+
+El formulario actualmente envía datos a WhatsApp. Para agregar backend:
+
+En `js/modules/forms.js`, descomenta la línea ~100 y configura tu endpoint:
+
+```javascript
+const result = await sendToServer('/api/solicitudes', storedData);
+```
 
 ---
 
-## 📧 Datos Que Se Recopilan
+## 📊 Estadísticas del Código
+
+| Métrica | Valor |
+|---------|-------|
+| **Líneas de CSS** | ~1700+ (bien documentadas) |
+| **Líneas de JS** | ~600+ (modular) |
+| **Archivos CSS** | 10 (segmentados) |
+| **Módulos JS** | 6 (config, modules, utils) |
+| **Comentarios Bilingües** | 150+ |
+| **Servicios Dinámicos** | 11 |
+| **Páginas HTML** | 5 |
+
+---
+
+## 🚀 Cómo Estudiar Este Proyecto
+
+### **Orden Recomendado (De lo General a lo Específico):**
+
+#### **1. ESTRUCTURA & ARQUITECTURA (5 min)**
+- Leer: `README.md` (este archivo)
+- Revisar: Estructura de carpetas
+- Entender: Flujo modular de JS
+
+#### **2. CONFIGURACIÓN (5 min)**
+- Leer: `js/config/constants.js`
+- Ver: Array de servicios, URLs, validaciones
+- Entender: Datos centralizados
+
+#### **3. ESTILOS BASE (10 min)**
+- Leer: `css/1-variables.css` (variables y temas)
+- Leer: `css/2-reset.css` (reset global)
+- Leer: `css/6-components.css` (componentes reutilizables)
+
+#### **4. LAYOUT & COMPONENTES (15 min)**
+- Leer: `css/4-header.css` (navegación)
+- Leer: `css/5-hero.css` (secciones hero)
+- Leer: `css/7-sections.css` (contenido principal)
+- Leer: `css/8-forms.css` (formularios)
+- Leer: `css/9-footer.css` (footer)
+- Leer: `css/10-responsive.css` (media queries)
+
+#### **5. FUNCIONALIDAD JAVASCRIPT (20 min)**
+- Leer: `js/utils/helpers.js` (funciones auxiliares)
+- Leer: `js/modules/navigation.js` (menú)
+- Leer: `js/modules/services.js` (servicios)
+- Leer: `js/modules/forms.js` (formularios) ← MÁS COMPLEJO
+- Leer: `js/index.js` (orquestador)
+
+#### **6. HTML (10 min)**
+- Revisar: `index.html` (estructura completa)
+- Revisar: `servicios.html` (renderización dinámica)
+- Revisar: Otras páginas
+
+#### **7. FLUJO COMPLETO (5 min)**
+- Desde HTML → JavaScript → CSS
+- Cómo se renderizan servicios
+- Cómo funcionan formularios
+
+**Tiempo Total: ~70 minutos para comprensión profunda**
+
+---
+
+## 🔐 Datos Recopilados (Privacidad)
 
 ### Formulario Join-Us (join-us.html)
 
-- Nombre completo
-- Email
-- Teléfono
+- Nombre, Email, Teléfono
 - Tipo de vehículo
 - Servicio seleccionado
-- Consulta especial (si elige "Otros")
-- Comentarios adicionales
+- Comentarios especiales
+- **Almacenamiento**: localStorage (`autolook_last_request`)
 
 ### Formulario Contacto (contacto.html)
 
-- Nombre
-- Email
-- Teléfono
-- Tipo de vehículo
-- Asunto
-- Mensaje
+- Nombre, Email, Teléfono
+- Asunto, Mensaje
+- **Almacenamiento**: localStorage
 
-Los datos se guardan en `localStorage` con keys:
+**NOTA**: Los datos se guardan localmente. No se envían servidores externos (solo a WhatsApp si clickean el botón).
 
-- `autolook_last_request` (Join-Us)
-- `autolook_contact_message` (Contacto)
+---
+
+## 🎯 Funciones Principales Explicadas
+
+### `initNavigation()` (modules/navigation.js)
+Maneja el menú hamburguesa: toggle, cierre al hacer click en link, cierre al clickear afuera.
+
+### `setActiveNavLink()` (modules/navigation.js)
+Resalta el enlace de navegación según la página actual.
+
+### `renderServices()` (modules/services.js)
+Recorre el array SERVICES y genera dinámicamente tarjetas HTML.
+
+### `setupJoinForm()` (modules/forms.js)
+Validación completa del formulario + integración WhatsApp:
+- Valida todos los campos
+- Detecta si es móvil o desktop
+- Genera enlace WhatsApp
+- Guarda en localStorage
+
+### Funciones Helper (utils/helpers.js)
+- `validateEmail()` - Validación de email
+- `validateMinLength()` - Validación de longitud
+- `generateWhatsAppURL()` - Crea enlace WhatsApp
+- `saveToLocalStorage()` - Guarda datos locales
+- `getCurrentDateTime()` - Fecha/hora actual
 
 ---
 
 ## ✨ Características Destacadas
 
-✅ Navegación sticky header
-✅ Hero con overlay y CTA
-✅ Grid responsive
-✅ Formularios validados
-✅ Google Maps integrado
-✅ Social links en header y footer
-✅ Animaciones suaves en hover
-✅ Sombras y profundidad visual
-✅ Tipografía profesional
-✅ Colores premium cohesivos
+✅ Navegación sticky header  
+✅ Hero con overlay dinámico  
+✅ Grid responsive completo  
+✅ Formularios con validación avanzada  
+✅ Google Maps integrado  
+✅ Social links en header y footer  
+✅ Animaciones suaves en hover  
+✅ Sombras y profundidad visual  
+✅ Tipografía profesional  
+✅ Código modular y bien documentado  
+✅ Comentarios bilingües (EN/ES)  
+✅ Estructura escalable para nuevas features  
+
+---
+
+## 📚 Recursos Útiles
+
+- **Cambiar Google Maps**: https://www.google.com/maps
+- **Comprimir imágenes**: https://tinypng.com/
+- **Validador HTML**: https://validator.w3.org/
+- **Validador CSS**: https://jigsaw.w3.org/css-validator/
+- **DevTools Chrome**: F12 en el navegador
 
 ---
 
 ## 📄 Licencia
 
-Proyecto Autolook © 2024. Todos los derechos reservados.
+Proyecto Autolook © 2026. Todos los derechos reservados.
 
 ---
 
-## 💡 Notas
+## 💡 Notas Finales
 
-- El diseño está optimizado para ser impactante y profesional
-- Los espacios para imágenes están claramente marcados en comentarios HTML
-- Todos los formularios validan datos en el cliente
-- El código es modular y fácil de personalizar
-- No requiere dependencias externas (vanilla HTML/CSS/JS)
+- ✅ Código refactorizado en estructura modular
+- ✅ Comentarios bilingües en todo el código
+- ✅ Fácil de entender y mantener
+- ✅ Escalable para agregar nuevas features
+- ✅ No requiere dependencias externas (vanilla HTML/CSS/JS ES6)
 
----
-
-**¿Necesitas ayuda?** Revisa los comentarios en los archivos HTML y JS para instrucciones específicas.
+**¿Necesitas ayuda?** Los archivos tienen comentarios detallados. Sigue el orden recomendado en "Cómo Estudiar Este Proyecto".
