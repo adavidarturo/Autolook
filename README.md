@@ -50,17 +50,6 @@ Autolook/
 
 ---
 
-
-### ❌ **NO ELIMINAR - SON NECESARIAS:**
-
-- ✔️ `css/` - Contiene toda la presentación visual segmentada
-- ✔️ `js/` - Lógica de la aplicación (config, modules, utils)
-- ✔️ `assets/images/` - Imágenes del sitio (necesarias para funcionalidad)
-- ✔️ Archivos `.html` - Contenido de las páginas
-
-
----
-
 ## 🎨 Características Principales
 
 ### ✅ **5 Páginas HTML Completas**
